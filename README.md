@@ -195,7 +195,7 @@ while True:
     <td style="color:#141414" align="center">Dado el centro y el radio de un círculo, determinar si un punto de R2 pertenece o no al interior del círculo.</td>
   </tr>
   <tr bgcolor="#e4e4ed">
-    <td style="color:#141414" align="center">Se crean condiciones en donde el <i>número</i> ingresado se compara con 0 (mayor, menor o igual)</td>
+    <td style="color:#141414" align="center">Se parte de la condición que el punto <i>R2</i> tiene que estar a una distancia menor o igual a la medida del radio, por lo cual, se utiliza la fórmula de la distancia entre dos puntos.</td>
   </tr>
 </table>
 
@@ -239,13 +239,13 @@ while True:
 
 <table cellspacing="1" bgcolor="" align="center">
   <tr bgcolor="#252582">
-    <th><b>Reto 4 - Parte 5</b></th>
+    <th><b>Reto 4 - Parte 6</b></th>
   </tr>
   <tr bgcolor="#e4e4ed">
     <td style="color:#141414" align="center">Dadas tres longitudes positivas, determinar si con esas longitudes se puede construir un triángulo.</td>
   </tr>
   <tr bgcolor="#e4e4ed">
-    <td style="color:#141414" align="center">Se crean condiciones en donde el <i>número</i> ingresado se compara con 0 (mayor, menor o igual)</td>
+    <td style="color:#141414" align="center">Se parte de la propiedad del triángulo que especifíca que la suma de las medidas de dos de sus lados debe ser mayor a la longitud del tercer lado.</td>
   </tr>
 </table>
 
@@ -273,6 +273,8 @@ def determinar(distancia_1, distancia_2, distancia_3):
 
 
     if menor + medio > mayor:
+        print(f"SÍ es posible contruir un triangulo de medidas {distancia_1, distancia_2, distancia_3}")
+    elif menor == medio == mayor:
         print(f"SÍ es posible contruir un triangulo de medidas {distancia_1, distancia_2, distancia_3}")
     else:
         print(f"NO es posible contruir un triangulo de medidas {distancia_1, distancia_2, distancia_3}")

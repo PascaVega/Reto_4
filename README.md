@@ -34,13 +34,14 @@ def continuar():
     opcion = int(input("¿Desea continuar verificando números? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para determinar si un número entero corresponde al código ASCII de una vocal minúscula")
+if __name__ == "__main__":
+    print("Programa para determinar si un número entero corresponde al código ASCII de una vocal minúscula")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break  
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break  
 
 # ! /\|=\/
 ```
@@ -79,13 +80,14 @@ def continuar():
     opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para determinar si la primera letra de la cadena es par o no en el código ASCII.")
+if __name__ == "__main__":
+    print("Programa para determinar si la primera letra de la cadena es par o no en el código ASCII.")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break  
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break  
 
 # ! /\|=\/
 ```
@@ -124,13 +126,14 @@ def continuar():
     opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para determinar si un caracter es un digito o no")
+if __name__ == "__main__":
+    print("Programa para determinar si un caracter es un digito o no")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break  
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break  
 
 # ! /\|=\/
 ```
@@ -176,13 +179,14 @@ def continuar():
     opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para determinar si un número es PAR o IMPAR")
+if __name__ == "__main__":
+    print("Programa para determinar si un número es PAR o IMPAR")
 
-while True:
-    introducir()
-    opcion = continuar ()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar ()
+        if opcion == 2:
+            break
 
 # ! /\|=\/
 ```
@@ -226,13 +230,14 @@ def continuar():
     opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para determinar si un punto está dentro del área de un círculo")
+if __name__ == "__main__":
+    print("Programa para determinar si un punto está dentro del área de un círculo")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
 
 # ! /\|=\/
 ```
@@ -283,13 +288,14 @@ def continuar():
     opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para determinar si es posible la construcción de un triángulo a partir de las medidas de los lados.")
+if __name__ == "__main__":
+    print("Programa para determinar si es posible la construcción de un triángulo a partir de las medidas de los lados.")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
 
 # ! /\|=\/
 ```

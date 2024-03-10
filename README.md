@@ -18,7 +18,7 @@
 #'a': 97 - 'e': 101 - 'i': 105 - 'o': 111 - 'u': 117
 
 def introducir():
-    numero = int(input("Ingrese un número para verificar si corresponde al código ASCII (digitos): "))
+    numero : int = int(input("Ingrese un número para verificar si corresponde al código ASCII (digitos): "))
     verificar(numero)
     return
 
@@ -31,7 +31,7 @@ def verificar(numero):
         print(f"El número {numero}, NO corresponde a una vocal minuscula del código ASCII")
         
 def continuar():
-    opcion = int(input("¿Desea continuar verificando números? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar verificando números? Marque 1 (sí) o 2 (no): "))
     return opcion
 
 if __name__ == "__main__":
@@ -41,7 +41,10 @@ if __name__ == "__main__":
         introducir()
         opcion = continuar()
         if opcion == 2:
-            break  
+            break
+        elif opcion != 1 and opcion != 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/
 ```
@@ -64,20 +67,20 @@ if __name__ == "__main__":
 #Dada una cadena de longitud 1, determine si el código ASCII de primera letra de la cadena es par o no.
  
 def introducir():
-    palabra = input("Ingrese una palabra: ")
+    palabra : str = input("Ingrese una palabra: ")
     determinar(palabra)
     return
 
 def determinar(palabra):
-    letra = palabra[0]
-    codigo = ord(letra)
+    letra : str = palabra[0]
+    codigo : int = ord(letra)
     if codigo % 2 == 0:
         print("La primera letra de la cadena es PAR")
     else:
         print("La primera letra de la cadena es IMPAR")
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
 if __name__ == "__main__":
@@ -87,7 +90,10 @@ if __name__ == "__main__":
         introducir()
         opcion = continuar()
         if opcion == 2:
-            break  
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/
 ```
@@ -110,20 +116,19 @@ if __name__ == "__main__":
 #Dado un carácter, construya un programa en Python para determinar si el caracter es un dígito o no.
 
 def introducir():
-    caracter = input("Ingrese un caracter: ")
+    caracter : str = input("Ingrese un caracter: ")
     determinar(caracter)
     return
 
 def determinar(caracter):
-    num_caracter = ord(caracter)
+    num_caracter : int = ord(caracter)
     if 128 > num_caracter:
         print(f"El caracter {caracter} está en la ISCII")
     else:
         print(f"El caracter {caracter} no está en la ISCII")
     
-
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
 if __name__ == "__main__":
@@ -133,7 +138,10 @@ if __name__ == "__main__":
         introducir()
         opcion = continuar()
         if opcion == 2:
-            break  
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/
 ```
@@ -174,20 +182,22 @@ def determinar(numero):
     else:
         print(f"El {numero} es invalido")
         introducir()
-
+    
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
 if __name__ == "__main__":
-    print("Programa para determinar si un número es PAR o IMPAR")
+    print("Programa para determinar si un número es positivo, negativo o cero")
 
     while True:
         introducir()
-        opcion = continuar ()
+        opcion = continuar()
         if opcion == 2:
             break
-
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 # ! /\|=\/
 ```
 
@@ -210,9 +220,9 @@ if __name__ == "__main__":
 import math
 
 def introducir():
-    centro = input("Introduzca las coordenadas del centro del círculo. Ejemplo: 2,2 : ")
-    radio = float(input("Introduzca el radio del cícurlo. Ejemplo: 2 : "))
-    punto = input("Introduzca las coordenadas del punto. Ejemplo: 2,2 : ")
+    centro : str = input("Introduzca las coordenadas del centro del círculo. Ejemplo: 2,2 : ")
+    radio : float = float(input("Introduzca el radio del cícurlo. Ejemplo: 2 : "))
+    punto : str= input("Introduzca las coordenadas del punto. Ejemplo: 2,2 : ")
     determinar(centro, radio, punto)
     return
     
@@ -227,7 +237,7 @@ def determinar(centro, radio, punto):
         print(f"El punto {punto} no está dentro del círculo")
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
 if __name__ == "__main__":
@@ -237,6 +247,9 @@ if __name__ == "__main__":
         introducir()
         opcion = continuar()
         if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
             break
 
 # ! /\|=\/
@@ -260,9 +273,9 @@ if __name__ == "__main__":
 #Dadas tres longitudes positivas, determinar si con esas longitudes se puede construir un triángulo.
 
 def introducir():
-    distancia_1 = float(input("Introduzca la primera distancia (digitos): "))
-    distancia_2 = float(input("Introduzca la segunda distancia (digitos): "))
-    distancia_3 = float(input("Introduzca la tercera distancia (digitos): "))
+    distancia_1 : float = float(input("Introduzca la primera distancia (digitos): "))
+    distancia_2 : float = float(input("Introduzca la segunda distancia (digitos): "))
+    distancia_3 : float = float(input("Introduzca la tercera distancia (digitos): "))
     determinar(distancia_1, distancia_2, distancia_3)
     return
 
@@ -285,7 +298,7 @@ def determinar(distancia_1, distancia_2, distancia_3):
         print(f"NO es posible contruir un triangulo de medidas {distancia_1, distancia_2, distancia_3}")
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
 if __name__ == "__main__":
@@ -295,6 +308,9 @@ if __name__ == "__main__":
         introducir()
         opcion = continuar()
         if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
             break
 
 # ! /\|=\/

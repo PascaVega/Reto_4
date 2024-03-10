@@ -2,9 +2,9 @@
 #Dadas tres longitudes positivas, determinar si con esas longitudes se puede construir un triángulo.
 
 def introducir():
-    distancia_1 = float(input("Introduzca la primera distancia (digitos): "))
-    distancia_2 = float(input("Introduzca la segunda distancia (digitos): "))
-    distancia_3 = float(input("Introduzca la tercera distancia (digitos): "))
+    distancia_1 : float = float(input("Introduzca la primera distancia (digitos): "))
+    distancia_2 : float = float(input("Introduzca la segunda distancia (digitos): "))
+    distancia_3 : float = float(input("Introduzca la tercera distancia (digitos): "))
     determinar(distancia_1, distancia_2, distancia_3)
     return
 
@@ -27,15 +27,19 @@ def determinar(distancia_1, distancia_2, distancia_3):
         print(f"NO es posible contruir un triangulo de medidas {distancia_1, distancia_2, distancia_3}")
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para determinar si es posible la construcción de un triángulo a partir de las medidas de los lados.")
+if __name__ == "__main__":
+    print("Programa para determinar si es posible la construcción de un triángulo a partir de las medidas de los lados.")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/

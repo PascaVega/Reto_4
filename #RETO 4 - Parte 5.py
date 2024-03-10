@@ -3,9 +3,9 @@
 import math
 
 def introducir():
-    centro = input("Introduzca las coordenadas del centro del círculo. Ejemplo: 2,2 : ")
-    radio = float(input("Introduzca el radio del cícurlo. Ejemplo: 2 : "))
-    punto = input("Introduzca las coordenadas del punto. Ejemplo: 2,2 : ")
+    centro : str = input("Introduzca las coordenadas del centro del círculo. Ejemplo: 2,2 : ")
+    radio : float = float(input("Introduzca el radio del cícurlo. Ejemplo: 2 : "))
+    punto : str= input("Introduzca las coordenadas del punto. Ejemplo: 2,2 : ")
     determinar(centro, radio, punto)
     return
     
@@ -20,15 +20,19 @@ def determinar(centro, radio, punto):
         print(f"El punto {punto} no está dentro del círculo")
 
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para determinar si un punto está dentro del área de un círculo")
+if __name__ == "__main__":
+    print("Programa para determinar si un punto está dentro del área de un círculo")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/

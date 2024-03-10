@@ -3,7 +3,7 @@
 #'a': 97 - 'e': 101 - 'i': 105 - 'o': 111 - 'u': 117
 
 def introducir():
-    numero = int(input("Ingrese un número para verificar si corresponde al código ASCII (digitos): "))
+    numero : int = int(input("Ingrese un número para verificar si corresponde al código ASCII (digitos): "))
     verificar(numero)
     return
 
@@ -16,15 +16,19 @@ def verificar(numero):
         print(f"El número {numero}, NO corresponde a una vocal minuscula del código ASCII")
         
 def continuar():
-    opcion = int(input("¿Desea continuar verificando números? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar verificando números? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para determinar si un número entero corresponde al código ASCII de una vocal minúscula")
+if __name__ == "__main__":
+    print("Programa para determinar si un número entero corresponde al código ASCII de una vocal minúscula")
 
-while True:
-    introducir()
-    opcion = continuar()
-    if opcion == 2:
-        break  
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and opcion != 2:
+            print("Sintax error")
+            break
 
 # ! /\|=\/

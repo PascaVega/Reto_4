@@ -16,17 +16,20 @@ def determinar(numero):
     else:
         print(f"El {numero} es invalido")
         introducir()
-
+    
 def continuar():
-    opcion = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
+    opcion : int = int(input("¿Desea continuar? Marque 1 (sí) o 2 (no): "))
     return opcion
 
-print("Programa para determinar si un número es PAR o IMPAR")
+if __name__ == "__main__":
+    print("Programa para determinar si un número es positivo, negativo o cero")
 
-while True:
-    introducir()
-    opcion = continuar ()
-    if opcion == 2:
-        break
-
+    while True:
+        introducir()
+        opcion = continuar()
+        if opcion == 2:
+            break
+        elif opcion != 1 and 2:
+            print("Sintax error")
+            break
 # ! /\|=\/

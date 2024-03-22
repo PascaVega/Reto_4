@@ -3,17 +3,18 @@
 import math
 
 def introducir():
-    centro : str = input("Introduzca las coordenadas del centro del círculo. Ejemplo: 2,2 : ")
+    centro_X : float = float(input("Introduzca las coordenadas del centro del círculo en x. Ejemplo: 2 : "))
+    centro_Y : float = float(input("Introduzca las coordenadas del centro del círculo en y. Ejemplo: 2 : "))
     radio : float = float(input("Introduzca el radio del cícurlo. Ejemplo: 2 : "))
-    punto : str= input("Introduzca las coordenadas del punto. Ejemplo: 2,2 : ")
-    determinar(centro, radio, punto)
+    punto_X : float = float(input("Introduzca las coordenadas del punto en x. Ejemplo: 2 : "))
+    punto_Y : float = float(input("Introduzca las coordenadas del punto en y. Ejemplo: 2 : "))
+    determinar(centro_X, centro_Y, radio, punto_X, punto_Y)
     return
     
 
-def determinar(centro, radio, punto):
-    centro_X , centro_Y = map(float, centro.split(","))
-    punto_X , punto_Y = map(float, punto.split(","))
-    distancia = math.sqrt(((centro_X - punto_X)**2) + ((centro_Y - punto_Y)**2))
+def determinar(centro_X, centro_Y, radio, punto_X, punto_Y):
+    distancia = (((centro_X - punto_X)**2) + ((centro_Y - punto_Y)**2))**(1/2)
+    punto = str(punto_X) + " , " + str(punto_Y)
     if distancia <= radio:
         print(f"El punto {punto} sí está dentro del círculo")
     else:

@@ -285,8 +285,17 @@ def introducir():
     return
 
 def determinar(distancia_1, distancia_2, distancia_3):
-    mayor = max(distancia_1, distancia_2, distancia_3)
-    menor = min(distancia_1, distancia_2, distancia_3)
+    mayor = menor = distancia_1
+    if distancia_2 > mayor:
+        mayor = distancia_2
+    elif distancia_2 < menor:
+        menor = distancia_2
+
+    if distancia_3 > mayor:
+        mayor = distancia_3 
+    elif distancia_3 < menor:
+        menor = distancia_3
+
     if distancia_1 != mayor and distancia_1 != menor:
         medio = distancia_1
     elif distancia_2 != mayor and distancia_2 != menor:
